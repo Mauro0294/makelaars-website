@@ -28,7 +28,7 @@
             @if ($house->id == $maxId) mb-8 @endif">
                 <div class="relative">
                     <img src="/images/huis{{ $house->id }}.png">
-                    <button class="font absolute text-xs bottom-0 left-0 text-white bg-[#E50E0B] p-2">{{ $house->type }}</button>
+                    <a href="{{route('houseDetails', ['id' => $house->id])}}"><button class="font absolute text-xs bottom-0 left-0 text-white bg-[#E50E0B] p-2">{{ $house->type }}</button></a>
                 </div>
                 <div class="p-3">
                     <h2 class="text-xl"><b>{{ $house->address }}</b></h2>
